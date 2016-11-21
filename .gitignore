@@ -1,0 +1,8 @@
+# ignore hidden files/folders:
+**/.*
+
+# allow .gitignore
+!.gitignore
+
+# sublime workspaces:
+**/*.sublime-workspace
