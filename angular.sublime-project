@@ -8,6 +8,15 @@
 				"*.odp*",
 				"*~lock*"
 			],
+			"path": "/DATA/projects/courses/ProgressBGCourses/logs"
+		},
+		{
+			"file_exclude_patterns":
+			[
+				"*.tags*",
+				"*.odp*",
+				"*~lock*"
+			],
 			"path": "."
 		},
 		{
@@ -17,7 +26,7 @@
 				"*.odp*",
 				"*~lock*"
 			],
-			"path": "../logs"
+			"path": "../../../www/wwwcourses.github.io/"
 		}
 	],
 	"settings":
@@ -30,16 +39,27 @@
 			"javascript",
 			"links"
 		],
+		// nodejs build system:
+		// "build_system":
+		// {
+		//  name: "NodeJS",
+		// 	"selector": "source.js",
+		// 	"shell_cmd":
+		// 	[
+		// 		"/usr/bin/node",
+		// 		"$file"
+		// 	]
+		// },
+
 		"build_system":
 		{
-			"selector": "source.js",
-			"shell_cmd":
-			[
-				"/usr/bin/node",
-				"$file"
-			]
+		  	"name": "HAML->HTML",
+			"selector": "text.haml",
+			"cmd": ["haml", "--trace", "$file", "${file_base_name}.html"],
+			"working_dir": "${file_path:${folder}}",
 		},
-		"fallback_encoding": "Cyrillic (Windows 1251)",
+
+
 		"font_face": "Courier 10 Pitch",
 		"ignored_words":
 		[
@@ -47,6 +67,7 @@
 			"script",
 			"layout"
 		],
+		"show_definitions": true,
 		"spell_check": true,
 		"sublime-view-in-browser":
 		{

@@ -6,6 +6,7 @@ function init(){
     attachEvents();
     calcTotalHours();
     calcTotalDays();
+    showAllNodes( document.getElementsByClassName('iep_syllabus_sub_themes') );
     // hideAllNodes( sub_themes_nodes );
 }
 function attachEvents(){
@@ -20,7 +21,8 @@ function attachEvents(){
 }
 function calcTotalHours(){
     var out_node = document.getElementsByClassName("total_hours_value")[0];
-    var hours_nodes = document.getElementsByClassName("hours");
+    var hours_nodes = document.querySelectorAll(".iep_syllabus_themes h3>span:nth-child(2)");
+    console.log("hours_nodes=", hours_nodes);
     var total = 0;
     for (var i = 0; i < hours_nodes.length; i++) {
         var theme_hours = parseInt(hours_nodes[i].innerHTML || 0); // cause of NaN
@@ -29,7 +31,7 @@ function calcTotalHours(){
     out_node.innerHTML = total;
 }
 function calcTotalDays(){
-    var hours_nodes = document.getElementsByClassName("hours");
+    var hours_nodes = document.querySelectorAll(".iep_syllabus_themes h3>span:nth-child(2)");
     var current_hours = 0;
     for (var i = 0; i < hours_nodes.length; i++) {
         var theme_hours = parseInt(hours_nodes[i].innerHTML || 0); // cause of NaN
@@ -38,12 +40,14 @@ function calcTotalDays(){
         // calculate current days and show it as tooltip
         var current_days;
         var hours_per_day = 4;
-        if ( current_hours % hours_per_day > 0){
-            current_days = Math.floor( current_hours / hours_per_day) + 1;
-        }else{
-            current_days = Math.floor( current_hours / hours_per_day);
-        }
+        // if ( current_hours % hours_per_day > 0){
+        //     current_days = Math.floor( current_hours / hours_per_day) + 1;
+        // }else{
+        //     current_days = Math.floor( current_hours / hours_per_day);
+        // }
 
+        // do not round:
+        current_days = current_hours / hours_per_day;
         hours_nodes[i].title = "day:" + current_days;
     };
 }
@@ -91,11 +95,10 @@ function showNode(effected_node){
     // change title of the H3 element
     effected_node.parentElement.getElementsByTagName("h3")[0].title = 'Hide Subtopics';
     // change arrow
-    var arr_node = effected_node.parentElement.getElementsByClassName("label")[0];
+    var arr_node = effected_node.parentElement.querySelector("span:nth-child(1)");
     changeArrow( arr_node, 'up');
 };
 function hideNode (effected_node) {
-    // console.log("hideNode IN: effected_node", effected_node);
     // hide node
     effected_node.style.display = 'none';
     // set custom show flag as property
@@ -103,15 +106,16 @@ function hideNode (effected_node) {
     // change title of the H3 element
     effected_node.parentElement.getElementsByTagName("h3")[0].title = 'Show Subtopics';
     // change arrow
-    var arr_node = effected_node.parentElement.getElementsByClassName("label")[0];
+    var arr_node = effected_node.parentElement.querySelector("span:nth-child(1)");
     changeArrow( arr_node, 'down');
 }
 function changeArrow ( node, direction ) {
+    // console.log("changeArrow node=", node);
     if ( direction == 'up' ){
-        node.classList.remove("arrow_down");
+        node.classList && node.classList.remove("arrow_down");
         node.classList.add("arrow_up");
     }else{
-        node.classList.remove("arrow_up");
+        node.classList && node.classList.remove("arrow_up");
         node.classList.add("arrow_down");
     }
 }

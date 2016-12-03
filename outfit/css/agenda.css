@@ -118,8 +118,8 @@
             margin-bottom: 1em;
         }
         .iep_syllabus_themes>li{
-                    margin: 1em 0 0 0;
-                    list-style-type: none;
+            margin: 1em 0 0 0;
+            list-style-type: none;
         }
         .iep_syllabus_themes>li>h3{
             display: inline-block;
@@ -141,7 +141,7 @@
         .iep_syllabus_themes h3>a>i{
             margin-right:.8em;
         }
-        .iep_syllabus_themes .label{
+        .iep_syllabus_themes h3>span:nth-child(1){
             display: inline-block;
             width: 85%;
             vertical-align: middle;
@@ -164,7 +164,7 @@
             text-decoration: none;
             color: #71BA8E;
         }
-        .iep_syllabus_themes>li>h3:hover>.label{
+        .iep_syllabus_themes>li>h3>span:nth-child(1):hover{
             /*font-size: 1.1em;*/
         }
         .iep_syllabus_themes .arrow{
