@@ -2,27 +2,31 @@
     width: 100%;
     display: inline-block;
     margin: 5em 0 0 0;
+    padding: .3em 0 0 0;
     height: 5em;
     vertical-align: middle;
     text-align: center;
     border-top: 1px solid #AAA;
     color: #999;
         }
- .license a{
+footer .license a{
     font-size: 1em;
     text-decoration: none;
     border: none;
     color: inherit;
 }
-.license a:hover{
+footer .license a:hover{
     text-decoration: none;
     background: none;
 }
-.left{
+footer .left{
     float: left;
 }
-.right{
+footer .right{
     float: right;
+}
+footer p{
+    margin: 0;
 }
 /*~~~~~~~~~~ images  ~~~~~~~~~~*/
 .license img{

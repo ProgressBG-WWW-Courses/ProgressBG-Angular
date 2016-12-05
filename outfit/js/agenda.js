@@ -6,8 +6,8 @@ function init(){
     attachEvents();
     calcTotalHours();
     calcTotalDays();
-    showAllNodes( document.getElementsByClassName('iep_syllabus_sub_themes') );
-    // hideAllNodes( sub_themes_nodes );
+    // showAllNodes( sub_themes_nodes);
+    hideAllNodes( sub_themes_nodes );
 }
 function attachEvents(){
     // get elements to attach events to

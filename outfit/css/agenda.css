@@ -112,6 +112,12 @@
         a.nonactive{
             color: #BBB;
         }
+        /*~~~~~~~~~~ course_about  ~~~~~~~~~~*/
+        .iep_course_about ul{
+            padding-left: 3em;
+
+        }
+
 
         /*~~~~~~~~~~ The list  ~~~~~~~~~~*/
         .iep_syllabus_themes{
@@ -143,8 +149,17 @@
         }
         .iep_syllabus_themes h3>span:nth-child(1){
             display: inline-block;
-            width: 85%;
+            width: 75%;
             vertical-align: middle;
+        }
+        .iep_syllabus_themes h3>span:nth-child(2){
+            float: right;
+            display: inline-block;
+            width: 15%;
+            padding: 0 .3em 0 0;
+            text-align: right;
+            color: #999;
+            /*border: 1px solid red;*/
         }
         .iep_syllabus_themes .arrow_down::after{
             /*content: "\f078";*/
