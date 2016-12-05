@@ -6,8 +6,8 @@ function init(){
     attachEvents();
     calcTotalHours();
     calcTotalDays();
-    // showAllNodes( sub_themes_nodes);
-    hideAllNodes( sub_themes_nodes );
+    showAllNodes( sub_themes_nodes);
+    // hideAllNodes( sub_themes_nodes );
 }
 function attachEvents(){
     // get elements to attach events to
