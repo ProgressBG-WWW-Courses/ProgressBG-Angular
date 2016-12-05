@@ -1,21 +1,21 @@
 /* ********************************************************************** */
 /* Reveal.js themes */
 /* ********************************************************************** */
-@import "/Angular/lib/reveal.js/css/theme/beige.css";
-/* @import "/Angular/lib/reveal.js/css/theme/serif.css"; */
-/* @import "/Angular/lib/reveal.js/css/theme/simple.css" */
-/* @import "/Angular/lib/reveal.js/css/theme/sky.css"; */
-@import "/Angular/lib/reveal.js/css/theme/solarized.css";
-/* @import "/Angular/lib/reveal.js/css/theme/white.css"; */
+@import "/ProgressBG-Angular/lib/reveal.js/css/theme/beige.css";
+/* @import "/ProgressBG-Angular/lib/reveal.js/css/theme/serif.css"; */
+/* @import "/ProgressBG-Angular/lib/reveal.js/css/theme/simple.css" */
+/* @import "/ProgressBG-Angular/lib/reveal.js/css/theme/sky.css"; */
+@import "/ProgressBG-Angular/lib/reveal.js/css/theme/solarized.css";
+/* @import "/ProgressBG-Angular/lib/reveal.js/css/theme/white.css"; */
 /* Custom */
-@import "/Angular/outfit/css/reveal.js.css";
+@import "/ProgressBG-Angular/outfit/css/reveal.js.css";
 /* ********************************************************************** */
 /* Code syntax highlighting */
 /* ********************************************************************** */
 @import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/obsidian.min.css";
-@import "/Angular/outfit/css/custom_hljs.css";
+@import "/ProgressBG-Angular/outfit/css/custom_hljs.css";
 /* ********************************************************************** */
 /* Text formating  */
 /* ********************************************************************** */
-@import "/Angular/outfit/css/colorSchemes/light/structuring_elements.css";
-@import "/Angular/outfit/css/colorSchemes/light/text_schemes.css";
+@import "/ProgressBG-Angular/outfit/css/colorSchemes/light/structuring_elements.css";
+@import "/ProgressBG-Angular/outfit/css/colorSchemes/light/text_schemes.css";
