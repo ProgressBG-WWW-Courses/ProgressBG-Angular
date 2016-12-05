@@ -71,7 +71,7 @@
 		"spell_check": true,
 		"sublime-view-in-browser":
 		{
-			"basePath": "/DATA/projects/courses/ProgressBGCourses",
+			"basePath": "/DATA/projects/www/wwwcourses.github.io",
 			"baseUrl": "http://127.0.0.1"
 		},
 		"tab_size": 4
